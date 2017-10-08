@@ -2,13 +2,29 @@ import turtle
 #Receber string e desenhar
 window = turtle.Screen()
 trt = turtle.Turtle()
-trt.speed(10)
+trt.speed(100)
 trt.penup()
-trt.setpos(50,50)
+trt.setpos(10,10)
 trt.pendown()
-F = 50
-a = 30
-for t in range (16):
-    trt.forward(F)
-    trt.forward(-F)
-    trt.right(a)
+
+string = input("brinco")
+jooj = input("Lei")
+a = 60
+n = input("Iterações")
+n = int(n)
+F = trt.forward(50)
+for i in range(n):
+    for b in jooj:
+        jooj.replace("F",string)
+        if b == "+F":
+            trt.forward(50)
+            trt.left(a)
+        if b == "F":
+            trt.forward(50)
+            trt.left(a)
+        if b == "-F":
+            trt.forward(-50)
+            trt.left(-a)
+#Se +, forward. Se -, -forward.
+        #########   PEGA UMA STRING. PEGA OUTRA STRING MAIOR. SUBSTITUI CADA
+        #########ELEMENTO DA PRIMEIRA STRING PELA PRIMEIRA STRING.
